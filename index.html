@@ -29,9 +29,17 @@
             sum += number;
           }
         }
-        const sumPlaceholder = document.getElementById('sumPlaceholder');
-        sumPlaceholder.innerText = `Real: ${sum}`;
-        calculateSumEstimate()
+      const sumPlaceholder = document.getElementById('sumPlaceholder');
+      const textContent = sumPlaceholder.innerText.trim().toLowerCase();
+      
+      // Check for different variations
+      if (textContent === 'real:' || textContent === 'real: ' || textContent === 'real:  ' || textContent === 'real: ' || textContent === 'real:') {
+          // Do something if the condition is met
+          console.log('The text matches one of the expected values.');
+      } else {
+          // Handle other cases
+          console.log('The text does not match the expected values.');
+      }
       }
       function calculateSumEstimate() {
         const text = document.getElementById('textInput').value;
