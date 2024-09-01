@@ -35,7 +35,7 @@
       // Check for different variations
       if (textContent === 'real:${sum}' || textContent === 'real: ${sum}' || textContent === 'real:${sum}' || textContent === 'real: ${sum}' || textContent === 'real:') {
           // Do something if the condition is met
-      sumPlaceholder.innerText = `Real: ${sum}`;
+      textContent = `Real: ${sum}`;
           console.log('The text matches one of the expected values.');
       } else {
           // Handle other cases
